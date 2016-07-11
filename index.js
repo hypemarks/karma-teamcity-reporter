@@ -33,14 +33,14 @@ var TeamcityReporter = function (baseReporterDecorator) {
 
   this.adapters = [fs.writeSync.bind(fs.writeSync, 1)]
 
-  this.TEST_IGNORED = "##teamcity[testIgnored name='%s']"
-  this.SUITE_START = "##teamcity[testSuiteStarted name='%s']"
-  this.SUITE_END = "##teamcity[testSuiteFinished name='%s']"
-  this.TEST_START = "##teamcity[testStarted name='%s']"
-  this.TEST_FAILED = "##teamcity[testFailed name='%s' message='FAILED' details='%s']"
-  this.TEST_END = "##teamcity[testFinished name='%s' duration='%s']"
-  this.BLOCK_OPENED = "##teamcity[blockOpened name='%s']"
-  this.BLOCK_CLOSED = "##teamcity[blockClosed name='%s']"
+  this.TEST_IGNORED = "#xx#teamcity[testIgnored name='%s']"
+  this.SUITE_START = "#xx#teamcity[testSuiteStarted name='%s']"
+  this.SUITE_END = "#xx#teamcity[testSuiteFinished name='%s']"
+  this.TEST_START = "#xx#teamcity[testStarted name='%s']"
+  this.TEST_FAILED = "#xx#teamcity[testFailed name='%s' message='FAILED' details='%s']"
+  this.TEST_END = "#xx#teamcity[testFinished name='%s' duration='%s']"
+  this.BLOCK_OPENED = "#xx#teamcity[blockOpened name='%s']"
+  this.BLOCK_CLOSED = "#xx#teamcity[blockClosed name='%s']"
 
   var reporter = this
   var initializeBrowser = function (browser) {
